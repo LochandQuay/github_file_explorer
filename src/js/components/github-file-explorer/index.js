@@ -20,6 +20,19 @@ module.exports = {
     fullRepoUrl: function() {
       return this.username + '/' + this.repo;
     },
+    fullRepoPath: function() {
+      if (this.path === '/') {
+        if (this.fullRepoUrl === '') {
+          return '/';
+        }
+        else {
+          return this.fullRepoUrl;
+        }
+      }
+      else {
+        return this.fullRepoUrl + '/' + this.path;
+      }
+    },
     sortedFiles: function() {
       return this.files.slice(0).sort(function(a, b) {
         if (a.type !== b.type) {

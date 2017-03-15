@@ -74,7 +74,11 @@ gulp.task('watch:js', function() {
     gulp.watch('src/js/**/*.*', ['js']);
 });
 
+gulp.task('watch:css', function() {
+    gulp.watch('src/css/*.css', ['css']);
+});
+
 gulp.task('compile', ['html', 'css', 'fonts', 'js']);
-gulp.task('watch', ['compile', 'watch:html', 'watch:js']);
+gulp.task('watch', ['compile', 'watch:html', 'watch:js', 'watch:css']);
 gulp.task('serve', ['watch', 'start-server']);
 gulp.task('default', ['compile']);

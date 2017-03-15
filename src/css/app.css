@@ -2,6 +2,10 @@ body {
   padding-top: 30px;
 }
 
+.page-header {
+  text-align: center;
+}
+
 #changeRepoForm {
   margin-bottom: 30px;
 }
